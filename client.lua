@@ -63,12 +63,12 @@ AddEventHandler('s13', function()
 
       local coords      = GetEntityCoords(GetPlayerPed(-1))
 
-      TriggerServerEvent('esx_phone:send', "police", "SIGNAL 13 ACTIVATED OFFICER IN DESTRESS ALL UNITS RESPOND " .. streetName, true, { -- need to be using ESX phone or ESX_phone 3 a modifyd script to recive messages
+      TriggerServerEvent('esx_phone:send', "police", "SIGNAL 13 ACTIVATED!  OFFICER IN DISTRESS. ALL UNITS RESPOND CODE 3. " .. streetName, true, {
         x = coords.x,
         y = coords.y,
         z = coords.z
-      })
-	  TriggerServerEvent('esx_phone:send', "ambulance", "SIGNAL 13 ACTIVATED BY A POLICE OFFICER IN DESTRESS AND MAY REQUIER MEDICAL ATTENTION PLEASE STAND BY TO DEPLOY TO " .. streetName, true, {
+			})
+			TriggerServerEvent('esx_phone:send', "ambulance", "SIGNAL 13 ACTIVATED BY A POLICE OFFICER IN DISTRESS AND MAY REQUIRE MEDICAL ATTENTION! " .. streetName, true, {
         x = coords.x,
         y = coords.y,
         z = coords.z
