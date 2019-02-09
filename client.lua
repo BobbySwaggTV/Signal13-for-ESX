@@ -68,5 +68,10 @@ AddEventHandler('s13', function()
         y = coords.y,
         z = coords.z
       })
+	  TriggerServerEvent('esx_phone:send', "ambulance", "SIGNAL 13 ACTIVATED BY A POLICE OFFICER IN DESTRESS AND MAY REQUIER MEDICAL ATTENTION PLEASE STAND BY TO DEPLOY TO " .. streetName, true, {
+        x = coords.x,
+        y = coords.y,
+        z = coords.z
+      })
     end
 end)
